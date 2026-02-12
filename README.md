@@ -421,7 +421,7 @@ If you use FusionWareAlttex in your research, please cite:
   publisher = {GitHub},
   journal = {GitHub Repository},
   howpublished = {\url{https://github.com/AehoraDeSum/FusionWareAlttex}},
-  doi = {10.5281/zenodo.XXXXXXX}
+  doi = {[![DOI](https://zenodo.org/badge/1156455304.svg)](https://doi.org/10.5281/zenodo.18624476)}
 }
 ```
 
