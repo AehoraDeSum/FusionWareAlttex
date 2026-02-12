@@ -467,4 +467,3 @@ The authors gratefully acknowledge:
     Last updated: February 2026
   </sub>
 </div>
-```
