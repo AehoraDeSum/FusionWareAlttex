@@ -7,6 +7,7 @@
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/AehoraDeSum/FusionWareAlttex?style=social)](https://github.com/AehoraDeSum/FusionWareAlttex)
+[![DOI](https://zenodo.org/badge/1156455304.svg)](https://doi.org/10.5281/zenodo.18624476)
 
 ---
 
@@ -466,4 +467,4 @@ The authors gratefully acknowledge:
     Last updated: February 2026
   </sub>
 </div>
-EOF
+```
