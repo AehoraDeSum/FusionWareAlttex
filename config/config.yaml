@@ -1,0 +1,66 @@
+# Configuration file for Quantum Gravitational Wave Detector
+
+# Stage 1: Simulation Parameters
+simulation:
+  num_samples: 10000
+  time_steps: 1000
+  dt: 0.001  # Time step in seconds
+  rubidium_params:
+    atomic_mass: 87  # Atomic mass number
+    ground_state_energy: -1.59e-18  # Joules
+    excited_state_energy: -1.58e-18  # Joules
+    decay_rate: 1e6  # Hz
+  cell_params:
+    temperature: 300  # Kelvin
+    pressure: 1e-3  # Torr
+    length: 0.1  # meters
+  gravitational_wave:
+    frequency_range: [10, 1000]  # Hz
+    amplitude_range: [1e-21, 1e-19]  # Strain
+    noise_level: 1e-22  # Strain
+
+# Stage 2: AI Model Parameters
+model:
+  architecture:
+    cnn_layers: 3
+    cnn_channels: [64, 128, 256]
+    transformer_layers: 4
+    transformer_heads: 8
+    transformer_dim: 512
+    dropout: 0.1
+  training:
+    batch_size: 32
+    learning_rate: 0.001
+    epochs: 50
+    validation_split: 0.2
+    early_stopping_patience: 10
+
+# Stage 3: Detector Hardware Parameters
+detector:
+  serial_port: "/dev/ttyUSB0"
+  baud_rate: 115200
+  laser:
+    wavelength: 780  # nm (D2 line for Rb)
+    power: 10  # mW
+    linewidth: 1  # MHz
+  magnetic_shielding:
+    enabled: true
+    field_strength: 0.1  # Gauss
+  piezoelectric:
+    voltage_range: [0, 100]  # Volts
+    calibration_steps: 100
+    strain_sensitivity: 1e-9  # Strain per volt
+
+# Stage 4: Real-time Analysis
+realtime:
+  sampling_rate: 1000  # Hz
+  window_size: 1024  # samples
+  update_interval: 1.0  # seconds
+  ligo_api:
+    enabled: true
+    base_url: "https://gracedb.ligo.org/api/"
+    check_interval: 60  # seconds
+  visualization:
+    update_rate: 10  # Hz
+    save_plots: true
+    output_dir: "data/plots"
